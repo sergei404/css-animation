@@ -72,6 +72,7 @@ body {
 .back p {
   color: #a7a7a7;
   font-size: 16px;
+  text-align: center;
 }
 .social {
   display: flex;

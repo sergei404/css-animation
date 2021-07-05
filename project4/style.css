@@ -1,0 +1,112 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: flex;
+  list-style: none;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  padding: 0;
+  margin-left: -10px;
+}
+
+li a {
+  position: relative;
+  display: block;
+  width: 70px;
+  height: 70px;
+  font-size: 30px;
+  text-align: center;
+  color: #262626;
+  line-height: 70px;
+  margin-left: 10px;
+}
+
+li a span {
+  position: absolute;
+  background-color: #262626;
+  transition: transform 0.5s;
+}
+
+li a span:nth-child(1),
+li a span:nth-child(3) {
+  width: 100%;
+  height: 2px;
+}
+
+li a span:nth-child(2),
+li a span:nth-child(4) {
+  width: 2px;
+  height: 100%;
+}
+
+li a span:nth-child(1) {
+  top: 0;
+  left: 0;
+  transform-origin: right;
+}
+
+li a span:nth-child(2) {
+  top: 0;
+  left: 0;
+  transform: scaleY(0);
+  transform-origin: bottom;
+}
+
+li a span:nth-child(3) {
+  left: 0;
+  bottom: 0;
+  transform-origin: left;
+}
+
+li a span:nth-child(4) {
+  right: 0;
+  top: 0;
+  transform: scaleY(0);
+  transform-origin: top;
+}
+
+li a:hover span:nth-child(1) {
+  transform: scaleX(0);
+  transition: transform 0.5s;
+  transform-origin: left;
+}
+
+li a:hover span:nth-child(2) {
+  transform: scaleY(1);
+  transform-origin: top;
+  transition: transform 0.5s;
+}
+
+li a:hover span:nth-child(3) {
+  transform: scaleX(0);
+  transition: transform 0.5s;
+  transform-origin: right;
+}
+
+li a:hover span:nth-child(4) {
+  transform: scaleY(1);
+  transform-origin: bottom;
+  transition: transform 0.5s;
+}
+
+.fa-facebook {
+  color: cadetblue;
+}
+
+.fa-twitter {
+  color: coral;
+}
+
+.fa-instagram {
+  color: darkgray;
+}
+
+.fa-vk {
+  color: dimgray;
+}
